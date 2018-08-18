@@ -62,7 +62,10 @@ public class RequestRide {
         List<Ride> rides = new ArrayList<Ride>();
         for(JsonElement option : options){
             JsonObject ride = option.getAsJsonObject();
-            Ride rideObj = new Ride(this.supplier.getSupplierName(), ride.get("car_type").toString(), Double.parseDouble(ride.get("price").toString()));
+            String carType = ride.get("car_type").toString();
+            carType = carType.substring(1,carType.length()-1); // Strip quotation marks.
+            Double price = Double.parseDouble(ride.get("price").toString());
+            Ride rideObj = new Ride(this.supplier.getSupplierName(), carType, price);
             rides.add(rideObj);
         }
 

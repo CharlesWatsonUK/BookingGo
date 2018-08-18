@@ -1,6 +1,7 @@
 package com.BookingGo;
 
-
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -10,16 +11,18 @@ public class Main {
     private static Supplier jeffsTaxis;
 
     public static void main(String[] args) {
-        System.out.println("hello");
 
         initSuppliers();
 
-        RequestRide req = new RequestRide(davesTaxis, "51.470020,-0.454295", "51.00000,1.0000");
+        String pickup = args[0];
+        String dropoff = args[1];
 
-        List<Ride> rides = req.request();
+        RequestRide req = new RequestRide(davesTaxis, pickup, dropoff);
+
+        List<Ride> rides = sortRides(req.request());
 
         for(Ride ride : rides){
-            System.out.println(ride.getSupplier() +" "+ride.getCarType()+" "+ride.getPrice().toString());
+            System.out.println(ride.getCarType()+" - "+ride.getSupplier()+" - "+ride.getPrice().toString());
         }
 
     }
@@ -30,5 +33,13 @@ public class Main {
         jeffsTaxis = new Supplier("Jeff's Taxis", "https://techtest.rideways.com/jeff");
     }
 
+    private static List<Ride> sortRides(List<Ride> rides){
+        Collections.sort(rides, new Comparator<Ride>() {
+            public int compare(Ride lhs, Ride rhs) {
+                return lhs.getPrice() > rhs.getPrice() ? -1 : lhs.getPrice() < rhs.getPrice() ? 1 : 0;
+            }
+        });
+        return rides;
+    }
 
 }
