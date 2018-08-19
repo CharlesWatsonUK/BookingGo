@@ -1,0 +1,2 @@
+java -jar BookingGo_Part1-1.0-SNAPSHOT.jar 51.470020,-0.454295 51.00000,1.0000 5
+PAUSE

@@ -3,10 +3,10 @@ package com.BookingGo;
 public class Ride {
 
     private String supplier;
-    private String carType;
+    private CarType carType;
     private Double price;
 
-    public Ride(String supplier, String carType, Double price) {
+    public Ride(String supplier, CarType carType, Double price) {
         this.supplier = supplier;
         this.carType = carType;
         this.price = price;
@@ -16,7 +16,7 @@ public class Ride {
         return supplier;
     }
 
-    public String getCarType() {
+    public CarType getCarType() {
         return carType;
     }
 
