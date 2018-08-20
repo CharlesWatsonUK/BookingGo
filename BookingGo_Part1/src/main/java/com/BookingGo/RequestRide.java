@@ -8,9 +8,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RequestRide {
+/**
+ * A Class to facilitate requesting rides from a single provider.
+ *
+ */
 
-    private final int HTTP_RESPONSE_TIMEOUT = 2000;
+public class RequestRide {
 
     private Supplier supplier;
     private String pickup;
@@ -60,7 +63,7 @@ public class RequestRide {
         try{
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
-            con.setConnectTimeout(HTTP_RESPONSE_TIMEOUT);
+            con.setConnectTimeout(Global.HTTP_RESPONSE_TIMEOUT);
             BufferedReader res = new BufferedReader(
                     new InputStreamReader(con.getInputStream())
             );

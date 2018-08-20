@@ -1,7 +1,14 @@
 import com.BookingGo.CarType;
+import com.BookingGo.Global;
 import com.BookingGo.Ride;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+/**
+ * Some test helper methods.
+ *
+ */
 
 public class TestUtils {
 
@@ -45,7 +52,7 @@ public class TestUtils {
      */
     public static List<Ride> serializeRides(String[] lines){
         List<Ride> rides = new ArrayList();
-        if(lines[1].equals("Sorry there are currently no rides matching your criteria.")){
+        if(lines[1].equals(Global.MESSAGE_NO_RIDES)){
             return rides; // If no rides, return empty list.
         }
         for(int i=1; i < lines.length; i++){
@@ -68,7 +75,12 @@ public class TestUtils {
      * @return
      */
     public static boolean validPassengerNumbers(List<Ride> rides, int passengers){
-        // TODO: complete - currently no way to get car capacity information without introducing redundancy - refactor of globals needed.
+        Map<CarType, Integer> carCapacities = Global.initCarCapacities();
+        for(Ride ride : rides){
+            if(passengers > carCapacities.get(ride.getCarType())){
+                return false;
+            }
+        }
         return true;
     }
 

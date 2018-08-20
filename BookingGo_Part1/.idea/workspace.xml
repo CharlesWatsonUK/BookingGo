@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b5cbdb3-8d6a-44d4-943e-971819d8fc3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ConsoleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/BookingGo/Global.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookingGo_Part1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookingGo_Part1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/BookingGo/RequestRide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/BookingGo/RequestRide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BookingGo_Part1-1.0-SNAPSHOT-shaded.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ConsoleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConsoleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/BookingGo_Part1-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Run.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/BookingGo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/BookingGo/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/dependency-reduced-pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-BookingGo_Part1-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -77,26 +71,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="java" value="9495" />
+          <entry key="java" value="11456" />
           <entry key="xml" value="299" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9495" />
+          <entry key="JAVA" value="11456" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="XML" value="299" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="5" />
+          <entry key="java" value="11" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="5" />
+          <entry key="JAVA" value="11" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -104,14 +98,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Global.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="141" column="33" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+            <state relative-caret-position="136">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding>
-                <element signature="e#2032#2420#0" expanded="true" />
-                <element signature="e#2419#2420#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,12 +113,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ConsoleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
+            <state relative-caret-position="238">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#774#775#0" expanded="true" />
-                <element signature="e#795#796#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,26 +125,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/RequestRide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="81" column="7" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
+            <state relative-caret-position="1105">
+              <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#640#641#0" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#670#671#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" column="137" selection-start-line="70" selection-start-column="137" selection-end-line="70" selection-end-column="137" />
+            <state relative-caret-position="136">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#785#786#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <folding>
+                <element signature="e#1576#1964#0" expanded="true" />
+                <element signature="e#1963#1964#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,13 +194,14 @@
         <option value="$PROJECT_DIR$/src/com/BookingGo/RequestRide.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/BookingGo/CarTypeEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/BookingGo/CarType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/BookingGo/Ride.java" />
         <option value="$PROJECT_DIR$/src/test/java/Test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ConsoleTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ConsoleTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/BookingGo/RequestRide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/BookingGo/Ride.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/BookingGo/Global.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java" />
       </list>
     </option>
   </component>
@@ -276,7 +281,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534758002748" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534763205827" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -291,7 +296,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ConsoleTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.BookingGo.Main" />
       <module name="BookingGo_Part1" />
@@ -335,50 +340,49 @@
       <workItem from="1534533916011" duration="1444000" />
       <workItem from="1534582325458" duration="2443000" />
       <workItem from="1534585012206" duration="22835000" />
-      <workItem from="1534748584389" duration="9166000" />
+      <workItem from="1534748584389" duration="14275000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConsoleTest - 2018.08.20 at 08h 48m 16s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 33m 19s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest - 2018.08.20 at 08h 54m 07s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 38m 45s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest - 2018.08.20 at 08h 55m 11s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 39m 07s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest - 2018.08.20 at 09h 14m 35s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 40m 45s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest - 2018.08.20 at 09h 20m 33s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 41m 19s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest - 2018.08.20 at 09h 21m 42s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 41m 46s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest - 2018.08.20 at 09h 23m 20s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 42m 11s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest - 2018.08.20 at 10h 06m 00s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 50m 08s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest - 2018.08.20 at 10h 06m 35s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 53m 40s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest - 2018.08.20 at 10h 07m 05s.xml">
+    <history-entry file="ConsoleTest - 2018.08.20 at 11h 53m 57s.xml">
       <configuration name="ConsoleTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42343000" />
+    <option name="totallyTimeSpent" value="47452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16577181" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16577181" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -387,7 +391,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33900708" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36737588" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -431,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Ride.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
@@ -445,49 +442,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/RequestRide.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Ride.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="7" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ConsoleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="141" column="33" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
-          <folding>
-            <element signature="e#2032#2420#0" expanded="true" />
-            <element signature="e#2419#2420#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="137" selection-start-line="70" selection-start-column="137" selection-end-line="70" selection-end-column="137" />
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#1576#1964#0" expanded="true" />
+            <element signature="e#1963#1964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/RequestRide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ConsoleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Global.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

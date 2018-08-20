@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ConsoleTest" time="4.854" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ConsoleTest" time="12.863" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
@@ -62,5 +62,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="test" classname="ConsoleTest" time="4.854"/>
+  <testcase name="testInvalidCoordinates" classname="ConsoleTest" time="1.21"/>
+  <testcase name="testInvalidPassengers" classname="ConsoleTest" time="3.919"/>
+  <testcase name="testValidInput1" classname="ConsoleTest" time="2.62"/>
+  <testcase name="testValidInput2" classname="ConsoleTest" time="3.457"/>
+  <testcase name="testValidInput3" classname="ConsoleTest" time="1.649"/>
 </testsuite>
