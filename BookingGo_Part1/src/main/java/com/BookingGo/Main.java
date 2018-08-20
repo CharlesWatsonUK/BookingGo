@@ -14,14 +14,10 @@ public class Main {
         initSuppliers();
         initCarCapacities();
 
+        // Get params from CLI.
         String pickup = args[0];
         String dropoff = args[1];
         int passengers = Integer.parseInt(args[2]);
-
-        // TEST CODE WITHOUT CLI - Uncomment the below and comment out the above.
-//        String pickup = "51.470020,-0.454295";
-//        String dropoff = "51.00000,1.0000";
-//        int passengers = 4;
 
         // Validate user input.
         if(!validInput(pickup, dropoff, passengers)){
@@ -38,6 +34,13 @@ public class Main {
         outputRides(rides, passengers);
     }
 
+    /**
+     * Get all rides for pickup and dropoff locations.
+     *
+     * @param pickup
+     * @param dropoff
+     * @return
+     */
     private static List<Ride> getRides(String pickup, String dropoff){
         System.out.println("Searching for your ride (this may take a few seconds)...");
         List<Ride> rides = new ArrayList();
@@ -48,6 +51,14 @@ public class Main {
        return rides;
     }
 
+
+    /**
+     * Sort rides (either price descending or ascending)
+     *
+     * @param rides
+     * @param descending
+     * @return
+     */
     private static List<Ride> sortRides(List<Ride> rides, final boolean descending){
         Collections.sort(rides, new Comparator<Ride>() {
             public int compare(Ride lhs, Ride rhs) {
@@ -61,6 +72,14 @@ public class Main {
         return rides;
     }
 
+    /**
+     * Filter rides (i.e. remove duplicate Car Types and
+     * cars that don't hold enough passengers).
+     *
+     * @param rides
+     * @param passengers
+     * @return
+     */
     private static List<Ride> filterRides(List<Ride> rides, int passengers){
        List<CarType> carTypes = Arrays.asList(CarType.values());
        List<Ride> filteredRides = new ArrayList();
@@ -78,6 +97,12 @@ public class Main {
        return filteredRides;
     }
 
+    /**
+     * Output rides to the CLI.
+     *
+     * @param rides
+     * @param passengers
+     */
     private static void outputRides(List<Ride> rides, int passengers){
         if(rides.size() < 1){
             System.out.println("Sorry there are currently no rides matching your criteria.");
@@ -88,6 +113,14 @@ public class Main {
         }
     }
 
+    /**
+     * Validate input params.
+     *
+     * @param pickup
+     * @param dropoff
+     * @param passengers
+     * @return
+     */
     private static boolean validInput(String pickup, String dropoff, int passengers){
         boolean pickupValid = pickup.matches(COORDINATE_PATTERN);
         boolean dropOffValid = dropoff.matches(COORDINATE_PATTERN);
@@ -95,12 +128,20 @@ public class Main {
         return pickupValid && dropOffValid && passengersValid;
     }
 
+    /**
+     * Initialise suppliers.
+     *
+     */
     private static void initSuppliers(){
         suppliers.add(new Supplier("Dave's Taxis", "https://techtest.rideways.com/dave"));
         suppliers.add(new Supplier("Eric's Taxis", "https://techtest.rideways.com/eric"));
         suppliers.add(new Supplier("Jeff's Taxis", "https://techtest.rideways.com/jeff"));
     }
 
+    /**
+     * Initialise Car Capacities.
+     *
+     */
     private static void initCarCapacities(){
         carCapacities.put(CarType.STANDARD, 4);
         carCapacities.put(CarType.EXECUTIVE, 4);

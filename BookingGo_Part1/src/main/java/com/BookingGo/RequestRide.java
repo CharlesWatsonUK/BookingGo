@@ -22,10 +22,20 @@ public class RequestRide {
         this.dropoff = dropoff;
     }
 
+    /**
+     * Get rides.
+     *
+     * @return
+     */
     public List<Ride> getRides(){
         return serializeResults(executeRequest());
     }
 
+    /**
+     * Build URL for GET request.
+     *
+     * @return
+     */
     private URL buildUrl(){
         String url = this.supplier.getUrl();
         String pickup = "pickup=" + this.pickup;
@@ -38,6 +48,11 @@ public class RequestRide {
         }
     }
 
+    /**
+     * Execute HTTP GET request - return response String.
+     *
+     * @return
+     */
     private String executeRequest(){
         URL url = buildUrl();
         StringBuffer content = new StringBuffer();
@@ -61,6 +76,14 @@ public class RequestRide {
         return content.toString();
     }
 
+
+    /**
+     * Serialize results in a response string
+     * into Ride objects.
+     *
+     * @param res
+     * @return
+     */
     private List<Ride> serializeResults(String res){
         // Convert response string to JSON and get the 'options'
         JsonArray options;
