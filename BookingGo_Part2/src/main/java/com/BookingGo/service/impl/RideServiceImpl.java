@@ -9,8 +9,8 @@ import com.BookingGo.service.RideService;
 import com.BookingGo.service.SupplierRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.*;
+
 
 /**
  * Ride Service Implementation.
@@ -61,7 +61,6 @@ public class RideServiceImpl implements RideService {
      * @return
      */
     private List<Ride> getRides(String pickup, String dropoff){
-        System.out.println(Global.MESSAGE_SEARCHING);
         List<Ride> rides = new ArrayList();
         for(Supplier supplier : suppliers){
             rides.addAll(this.supplierRequestService.getRides(supplier, pickup, dropoff));
