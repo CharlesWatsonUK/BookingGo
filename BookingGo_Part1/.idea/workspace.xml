@@ -2,19 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b5cbdb3-8d6a-44d4-943e-971819d8fc3b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/CarType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Global.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/RequestRide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Ride.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/RideApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/RideService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/RideServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Supplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/service/impl/RideServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/BookingGo/CarType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/BookingGo/Global.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/BookingGo/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/BookingGo/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/BookingGo/RequestRide.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/BookingGo/Ride.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/BookingGo/Supplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/CarType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/model/CarType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Global.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/RequestRide.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/model/Ride.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/RideApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/api/RideApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/RideService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/service/RideService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/RideServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/src/main/java/com/BookingGo/model/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/target/BookingGo_Part2-0.1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/target/BookingGo_Part2-0.1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingGo_Part2/target/BookingGo_Part2-0.1.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingGo_Part2/target/BookingGo_Part2-0.1.0.jar.original" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,10 +73,10 @@
     <session id="1850311312">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -104,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Global.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="85">
               <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -117,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/ConsoleTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,12 +136,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/RequestRide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
+            <state relative-caret-position="969">
               <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#727#728#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,8 +148,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+            <state relative-caret-position="840">
+              <caret line="73" column="36" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -151,12 +157,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="51">
               <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#826#827#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,12 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
-              <folding>
-                <element signature="e#1576#1964#0" expanded="true" />
-                <element signature="e#1963#1964#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2108">
+              <caret line="124" selection-start-line="124" selection-end-line="124" />
             </state>
           </provider>
         </entry>
@@ -237,9 +237,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,12 +289,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534776503387" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534776976715" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../BookingGo_Part2" />
   </component>
   <component name="RunDashboard">
@@ -355,6 +355,7 @@
       <workItem from="1534582325458" duration="2443000" />
       <workItem from="1534585012206" duration="22835000" />
       <workItem from="1534748584389" duration="17425000" />
+      <workItem from="1534843901465" duration="689000" />
     </task>
     <servers />
   </component>
@@ -391,12 +392,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50602000" />
+    <option name="totallyTimeSpent" value="51291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15991472" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -405,7 +407,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28091106" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28091106" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,32 +455,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Global.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="85">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -489,7 +471,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/ConsoleTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -498,31 +480,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/RequestRide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
+        <state relative-caret-position="969">
           <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/BookingGo/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
-          <folding>
-            <element signature="e#1576#1964#0" expanded="true" />
-            <element signature="e#1963#1964#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2108">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="36" lean-forward="true" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
+        <state relative-caret-position="840">
+          <caret line="73" column="36" selection-start-line="73" selection-start-column="36" selection-end-line="73" selection-end-column="36" />
         </state>
       </provider>
     </entry>
