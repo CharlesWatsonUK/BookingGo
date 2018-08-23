@@ -2,7 +2,6 @@ package com.BookingGo.service;
 
 import com.BookingGo.exception.InvalidSearchParameterException;
 import com.BookingGo.model.Ride;
-
 import java.util.List;
 
 /**

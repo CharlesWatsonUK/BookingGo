@@ -7,7 +7,6 @@ import com.BookingGo.model.Supplier;
 import com.BookingGo.service.SupplierRequestService;
 import com.google.gson.*;
 import org.springframework.stereotype.Service;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -51,7 +50,7 @@ public class SupplierRequestServiceImpl implements SupplierRequestService {
             response = executeRequest(url);
         }catch (Exception e){
             logger.log(Level.WARNING, "Could not get valid response from supplier [supplier={0}, pickup={1}, dropoff={2}]\n" +
-                    "Error: {3}.", new Object[]{supplier.getSupplierName(), pickup, dropoff, e.getMessage()});
+                    "Warn: {3}.", new Object[]{supplier.getSupplierName(), pickup, dropoff, e.getMessage()});
             return rides; // If error return empty list of rides.
         }
 
@@ -60,7 +59,7 @@ public class SupplierRequestServiceImpl implements SupplierRequestService {
             rides = serializeResults(response, supplier);
         }catch(Exception e){
             logger.log(Level.WARNING, "Could not serialize supplier's response [supplier={0}, pickup={1}, dropoff={2}]\n" +
-                    "Error: {3}.", new Object[]{supplier.getSupplierName(), pickup, dropoff, e.getMessage()});
+                    "Warn: {3}.", new Object[]{supplier.getSupplierName(), pickup, dropoff, e.getMessage()});
         }finally {
             return rides; // If error return empty list of rides.
         }

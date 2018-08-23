@@ -3,7 +3,7 @@
 My solution for the [BookingGo technical assesment](https://github.com/rideways/technical_test).
 **This repository consists of two projects (for parts 1 and 2 of the task)**
 
-Download the repository.
+Download the respository.
 ```
 $ git clone https://github.com/CharlesWatsonUK/BookingGo
 ```
@@ -13,7 +13,7 @@ Requires: Java 8 - JRE 8
 
 1) Go to the dist folder.
 ```
-$ cd dist
+$ cd BookingGo/target
 ```
 
 2)   Run the distributable (JAR) files.
@@ -24,9 +24,8 @@ $ java -jar BookingGo_Part1.jar <pickup> <dropoff> <passengers>
 ```
 B) Run the JAR for Task 2 - REST API Solution.
 ```
-$ java -jar BookingGo_Part2.jar
+$ java -jar <BookingGo_Part2.jar
 ```
-[Consult the API documentation](https://github.com/CharlesWatsonUK/apiDocs.md) to make requests.
 
 
 ### Compile and run the solutions (including tests)
@@ -52,12 +51,12 @@ $ mvn package
 A) If you've just packaged Part 1...
 ```
 $ cd target
-$ java -JAR <JAR file> <pickup> <dropoff> <passengers>
+$ java -jar <JAR file> <pickup> <dropoff> <passengers>
 ```
 B) If you've just packaged Part 2...
 ```
 $ cd target
-$ java -JAR <JAR file>
+$ java -jar <JAR file>
 ```
 [Consult the API documentation](https://github.com/CharlesWatsonUK/apiDocs.md) to make requests.
 
@@ -65,14 +64,16 @@ $ java -JAR <JAR file>
 ##### App
 - Java 8 - core language
 - GSON - JSON handling
-- Spring Boot - REST API (only part 2)
+- Spring Boot - REST API (part 2 only)
 
 ##### Test
-- JUnit 5 (Jupiter API) - core testing framework
-- Spring Boot Test - mock servlet to test REST API
+- JUnit 5 (Jupiter API) (part 1 only)
+- Spring Boot Test - (part 2 only)
+    * Spring Boot Test package comes with JUnit4.
 
 ##### Build
 - Apache Maven 3 - build & dependency management
-  - Maven Surefire Plugin - so JUnit5 tests are picked up by Maven
-  - Apache Shade Plugin - puts everything in JAR (only part 1)
-  - Spring Boot Maven Plugin - puts everything in JAR (only part 2)
+  - Maven Surefire Plugin - so JUnit5 tests are picked up by Maven (part 1 only)
+  - Apache Shade Plugin - puts everything in the JAR (part 1 only)
+  - Spring Boot Maven Plugin - puts everything in the JAR (part 2 only)
+  

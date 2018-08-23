@@ -1,5 +1,10 @@
 package com.BookingGo.model;
 
+/**
+ * Supplier class
+ *
+ */
+
 public class Supplier {
 
     private String supplierName;

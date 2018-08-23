@@ -1,5 +1,10 @@
 package com.BookingGo;
 
+/**
+ * Car Type enum
+ *
+ */
+
 public enum CarType {
     STANDARD,
     EXECUTIVE,

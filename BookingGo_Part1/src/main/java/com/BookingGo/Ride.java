@@ -1,5 +1,10 @@
 package com.BookingGo;
 
+/**
+ * Ride class
+ *
+ */
+
 public class Ride {
 
     private String supplier;

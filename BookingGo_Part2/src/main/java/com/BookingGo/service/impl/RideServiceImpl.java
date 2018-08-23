@@ -130,5 +130,4 @@ public class RideServiceImpl implements RideService {
         boolean passengersValid = passengers <= 16 && passengers > 0;
         return pickupValid && dropOffValid && passengersValid;
     }
-
 }

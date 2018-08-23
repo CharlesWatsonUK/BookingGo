@@ -2,7 +2,6 @@ package com.BookingGo.service;
 
 import com.BookingGo.model.Ride;
 import com.BookingGo.model.Supplier;
-
 import java.util.List;
 
 /**

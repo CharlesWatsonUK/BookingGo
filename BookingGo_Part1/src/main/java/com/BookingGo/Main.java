@@ -2,6 +2,11 @@ package com.BookingGo;
 
 import java.util.*;
 
+/**
+ * Main Application class
+ *
+ */
+
 public class Main {
 
     private static Map<CarType, Integer> carCapacities = Global.initCarCapacities();
@@ -37,7 +42,7 @@ public class Main {
         System.out.println(Global.MESSAGE_SEARCHING);
         List<Ride> rides = new ArrayList();
         for(Supplier supplier : suppliers){
-           RequestRide req = new RequestRide(supplier, pickup, dropoff);
+           SupplierRequest req = new SupplierRequest(supplier, pickup, dropoff);
            rides.addAll(req.getRides());
        }
        return rides;
