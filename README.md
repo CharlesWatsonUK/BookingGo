@@ -36,7 +36,7 @@ $ cd BookingGo/BookingGo_Part1
 ```
 OR
 ```
-$ cd BookingGo/BookingGoPart2
+$ cd BookingGo/BookingGo_Part2
 ```
 2) Maven compile
 ```
