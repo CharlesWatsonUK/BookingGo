@@ -1,5 +1,8 @@
 package com.BookingGo;
 
+import com.BookingGo.model.CarType;
+import com.BookingGo.model.Ride;
+import com.BookingGo.model.Supplier;
 import com.google.gson.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -17,24 +20,39 @@ import java.util.List;
 
 public class SupplierRequest {
 
-    private Supplier supplier;
-    private String pickup;
-    private String dropoff;
-
-    public SupplierRequest(Supplier supplier, String pickup, String dropoff) {
-        this.supplier = supplier;
-        this.pickup = pickup;
-        this.dropoff = dropoff;
-    }
-
-
     /**
      * Get rides.
      *
      * @return
      */
-    public List<Ride> getRides(){
-        return serializeResults(executeRequest());
+    public static List<Ride> getRides(Supplier supplier, String pickup, String dropoff){
+        URL url;
+        String response;
+        List<Ride> rides = new ArrayList();
+
+        // Build request URL.
+        try{
+            url = buildUrl(supplier, pickup, dropoff);
+        }catch(Exception e){
+            System.out.println("Could build URL for "+supplier.getSupplierName());
+            return rides; // If error return empty list of rides.
+        }
+
+        // Get response.
+        try{
+            response = executeRequest(url);
+        }catch (Exception e){
+            return rides; // If error return empty list of rides (servers' often give 500)
+        }
+
+        // Serialize response into a list of Ride objects and return.
+        try{
+            rides = serializeResults(response, supplier);
+        }catch(Exception e){
+            System.out.println("Could not serialize response from "+supplier.getSupplierName());
+        }finally {
+            return rides; // If error return empty list of rides.
+        }
     }
 
 
@@ -43,44 +61,33 @@ public class SupplierRequest {
      *
      * @return
      */
-    private URL buildUrl(){
-        String url = this.supplier.getUrl();
-        String pickup = "pickup=" + this.pickup;
-        String dropoff = "dropoff=" + this.dropoff;
-        try {
-            return new URL(url + "?" + pickup + "&" + dropoff);
-        }catch (Exception e){
-            System.out.println(e);
-            return null;
-        }
+    private static URL buildUrl(Supplier supplier, String pickup, String dropoff)
+            throws Exception {
+        String url = supplier.getUrl();
+        String pickupParam = "pickup=" + pickup;
+        String dropoffParam = "dropoff=" + dropoff;
+        return new URL(url + "?" + pickupParam + "&" + dropoffParam);
     }
-
 
     /**
      * Execute HTTP GET request - return response String.
      *
      * @return
      */
-    private String executeRequest(){
-        URL url = buildUrl();
+    private static String executeRequest(URL url) throws Exception{
         StringBuffer content = new StringBuffer();
         // Execute HTTP request.
-        try{
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("GET");
-            con.setConnectTimeout(Global.HTTP_RESPONSE_TIMEOUT);
-            BufferedReader res = new BufferedReader(
-                    new InputStreamReader(con.getInputStream())
-            );
-            String inputLine;
-            while((inputLine = res.readLine()) != null){
-                content.append(inputLine);
-            }
-            res.close();
-        }catch(Exception e){
-            // In case of error return empty string.
-            return "";
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("GET");
+        con.setConnectTimeout(Global.HTTP_RESPONSE_TIMEOUT);
+        BufferedReader res = new BufferedReader(
+                new InputStreamReader(con.getInputStream())
+        );
+        String inputLine;
+        while((inputLine = res.readLine()) != null){
+            content.append(inputLine);
         }
+        res.close();
         return content.toString();
     }
 
@@ -92,31 +99,23 @@ public class SupplierRequest {
      * @param res
      * @return
      */
-    private List<Ride> serializeResults(String res){
+    private static List<Ride> serializeResults(String res, Supplier supplier)
+            throws Exception{
         // Convert response string to JSON and get the 'options'
         JsonArray options;
-        try {
-            // Convert response string to JSON
-            Gson g = new Gson();
-            JsonObject resJson = new JsonParser().parse(res).getAsJsonObject();
-            options = resJson.getAsJsonArray("options");
-        }catch(Exception e){
-            // In case of error an empty list of rides.
-            return new ArrayList<Ride>();
-        }
+        // Convert response string to JSON
+        Gson g = new Gson();
+        JsonObject resJson = new JsonParser().parse(res).getAsJsonObject();
+        options = resJson.getAsJsonArray("options");
         // Serialize JSON as list of Ride objects.
         List<Ride> rides = new ArrayList<Ride>();
         for(JsonElement option : options){
-            try {
-                JsonObject ride = option.getAsJsonObject();
-                String carType = ride.get("car_type").toString();
-                carType = carType.substring(1, carType.length() - 1); // Strip quotation marks.
-                Double price = Double.parseDouble(ride.get("price").toString());
-                Ride rideObj = new Ride(this.supplier.getSupplierName(), CarType.valueOf(carType), price);
-                rides.add(rideObj);
-            }catch (Exception e){
-                // If can't serialize a ride object (e.g. if car type doesn't exist) then skip it.
-            }
+            JsonObject ride = option.getAsJsonObject();
+            String carType = ride.get("car_type").toString();
+            carType = carType.substring(1, carType.length() - 1); // Strip quotation marks.
+            Double price = Double.parseDouble(ride.get("price").toString());
+            Ride rideObj = new Ride(supplier.getSupplierName(), CarType.valueOf(carType), price);
+            rides.add(rideObj);
         }
         return rides;
     }

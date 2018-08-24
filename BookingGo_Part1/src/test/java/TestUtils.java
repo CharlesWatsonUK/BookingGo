@@ -1,6 +1,6 @@
-import com.BookingGo.CarType;
+import com.BookingGo.model.CarType;
 import com.BookingGo.Global;
-import com.BookingGo.Ride;
+import com.BookingGo.model.Ride;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

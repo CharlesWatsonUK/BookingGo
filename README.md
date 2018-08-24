@@ -58,7 +58,7 @@ B) If you've just packaged Part 2...
 $ cd target
 $ java -jar <JAR file>
 ```
-[Consult the API documentation](https://github.com/CharlesWatsonUK/apiDocs.md) to make requests.
+[Consult the API documentation](https://github.com/CharlesWatsonUK/BookingGo/api.md) to make requests.
 
 ### Technologies
 ##### App
@@ -76,4 +76,3 @@ $ java -jar <JAR file>
   - Maven Surefire Plugin - so JUnit5 tests are picked up by Maven (part 1 only)
   - Apache Shade Plugin - puts everything in the JAR (part 1 only)
   - Spring Boot Maven Plugin - puts everything in the JAR (part 2 only)
-  

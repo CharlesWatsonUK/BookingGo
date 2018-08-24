@@ -1,6 +1,6 @@
 import com.BookingGo.Global;
 import com.BookingGo.Main;
-import com.BookingGo.Ride;
+import com.BookingGo.model.Ride;
 import org.junit.jupiter.api.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

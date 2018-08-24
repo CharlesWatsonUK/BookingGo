@@ -1,4 +1,4 @@
-package com.BookingGo;
+package com.BookingGo.model;
 
 /**
  * Ride class

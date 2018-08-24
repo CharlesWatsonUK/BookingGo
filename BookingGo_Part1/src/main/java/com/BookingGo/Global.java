@@ -1,5 +1,8 @@
 package com.BookingGo;
 
+import com.BookingGo.model.CarType;
+import com.BookingGo.model.Supplier;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

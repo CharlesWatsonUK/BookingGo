@@ -1,5 +1,9 @@
 package com.BookingGo;
 
+import com.BookingGo.model.CarType;
+import com.BookingGo.model.Ride;
+import com.BookingGo.model.Supplier;
+
 import java.util.*;
 
 /**
@@ -42,8 +46,7 @@ public class Main {
         System.out.println(Global.MESSAGE_SEARCHING);
         List<Ride> rides = new ArrayList();
         for(Supplier supplier : suppliers){
-           SupplierRequest req = new SupplierRequest(supplier, pickup, dropoff);
-           rides.addAll(req.getRides());
+           SupplierRequest.getRides(supplier, pickup, dropoff);
        }
        return rides;
     }
