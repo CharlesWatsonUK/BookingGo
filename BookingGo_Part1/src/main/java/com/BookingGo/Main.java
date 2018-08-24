@@ -16,15 +16,29 @@ public class Main {
     private static Map<CarType, Integer> carCapacities = Global.initCarCapacities();
     private static List<Supplier> suppliers = Global.initSuppliers();
 
+    /**
+     * Main method.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
+        String pickup;
+        String dropoff;
+        int passengers;
         // Get params from CLI.
-        String pickup = args[0];
-        String dropoff = args[1];
-        int passengers = Integer.parseInt(args[2]);
+        try {
+            pickup = args[0];
+            dropoff = args[1];
+            passengers = Integer.parseInt(args[2]);
+        }catch(Exception e){
+            System.out.println(Global.MESSAGE_MISSING_PARAMETERS);
+            return;
+        }
 
         // Validate user input.
         if(!validInput(pickup, dropoff, passengers)){
             System.out.print(Global.MESSAGE_INVALID_INPUT);
+            return;
         }
 
         // Get, filter, sort and output rides.
@@ -46,7 +60,8 @@ public class Main {
         System.out.println(Global.MESSAGE_SEARCHING);
         List<Ride> rides = new ArrayList();
         for(Supplier supplier : suppliers){
-           SupplierRequest.getRides(supplier, pickup, dropoff);
+           SupplierRequest req = new SupplierRequest(supplier, pickup, dropoff);
+           rides.addAll(req.getRides());
        }
        return rides;
     }

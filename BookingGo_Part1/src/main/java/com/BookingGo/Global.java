@@ -19,6 +19,9 @@ public class Global {
 
     public static final String COORDINATE_PATTERN = "^[-]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?),\\s*[-]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$";
 
+    public static final String MESSAGE_MISSING_PARAMETERS = "Missing parameters! \n" +
+            "There should be 3: <pickup> <dropoff> <passengers>";
+
     public static final String MESSAGE_INVALID_INPUT = "Invalid input!\n" +
             "Please make sure your location coordinates are properly formed, e.g.:\n" +
             "51.470020,-0.454295" +

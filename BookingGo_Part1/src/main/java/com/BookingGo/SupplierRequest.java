@@ -20,12 +20,22 @@ import java.util.List;
 
 public class SupplierRequest {
 
+    private Supplier supplier;
+    private String pickup;
+    private String dropoff;
+
+    public SupplierRequest(Supplier supplier, String pickup, String dropoff){
+        this.supplier = supplier;
+        this.pickup = pickup;
+        this.dropoff = dropoff;
+    }
+
     /**
      * Get rides.
      *
      * @return
      */
-    public static List<Ride> getRides(Supplier supplier, String pickup, String dropoff){
+    public List<Ride> getRides(){
         URL url;
         String response;
         List<Ride> rides = new ArrayList();
@@ -61,7 +71,7 @@ public class SupplierRequest {
      *
      * @return
      */
-    private static URL buildUrl(Supplier supplier, String pickup, String dropoff)
+    private URL buildUrl(Supplier supplier, String pickup, String dropoff)
             throws Exception {
         String url = supplier.getUrl();
         String pickupParam = "pickup=" + pickup;
@@ -74,7 +84,7 @@ public class SupplierRequest {
      *
      * @return
      */
-    private static String executeRequest(URL url) throws Exception{
+    private String executeRequest(URL url) throws Exception{
         StringBuffer content = new StringBuffer();
         // Execute HTTP request.
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -99,7 +109,7 @@ public class SupplierRequest {
      * @param res
      * @return
      */
-    private static List<Ride> serializeResults(String res, Supplier supplier)
+    private List<Ride> serializeResults(String res, Supplier supplier)
             throws Exception{
         // Convert response string to JSON and get the 'options'
         JsonArray options;
