@@ -26,7 +26,7 @@ B) Run the JAR for Task 2 - REST API Solution.
 ```
 $ java -jar <BookingGo_Part2.jar
 ```
-
+[Consult the API documentation](BookingGo/api.md) to make requests.
 
 ### Compile and run the solutions (including tests)
 Requires: Java 8 - (JDK & JRE), Apache Maven 3
@@ -58,7 +58,7 @@ B) If you've just packaged Part 2...
 $ cd target
 $ java -jar <JAR file>
 ```
-[Consult the API documentation](https://github.com/CharlesWatsonUK/BookingGo/api.md) to make requests.
+[Consult the API documentation](BookingGo/api.md) to make requests.
 
 ### Technologies
 ##### App
