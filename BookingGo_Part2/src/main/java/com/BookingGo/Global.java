@@ -19,10 +19,10 @@ public class Global {
 
     public static final String COORDINATE_PATTERN = "^[-]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?),\\s*[-]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$";
 
-    public static final String MESSAGE_INVALID_INPUT = "Invalid input!\n" +
-            "Please make sure your location coordinates are properly formed, e.g.:\n" +
-            "51.470020,-0.454295" +
-            "\n also please ensure your passenger number is between 1 and 16 inclusive.";
+    public static final String MESSAGE_INVALID_INPUT = "Invalid input! " +
+            "Please make sure your location coordinates are properly formed, e.g.: " +
+            "51.470020,-0.454295 " +
+            "also please ensure your passenger number is between 1 and 16 inclusive.";
 
     public static final String MESSAGE_SEARCHING = "Searching for your ride (this may take a few seconds)...";
 

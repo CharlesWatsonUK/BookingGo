@@ -1,8 +1,7 @@
-# BookingGo Ride API Docs
+# Ride API Documentation
 
 Access the API with the URL
 `http://localhost:8080/bookinggo/ride`
-
 An example request with parameters
 `localhost:8080/bookinggo/ride?pickup=51.470020,-0.454295&dropoff=51.470021,-0.454280&passengers=1`
 
@@ -10,10 +9,10 @@ An example request with parameters
 The Ride API takes the following parameters:
 * pickup
   * Pickup location for the journey
-  * lat, long e.g. 3.410632,-2.157533
+  * lat, long e.g. 51.470020,-0.454295
 * dropoff
   * Drop off location for the journey
-  * lat, long e.g. 3.410632,-2.157533
+  * lat, long e.g. 51.470021,-0.454280
 
 ### Responses
 ##### 200 OK

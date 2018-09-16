@@ -1,78 +1,99 @@
 # BookingGo
 
 My solution for the [BookingGo technical assesment](https://github.com/rideways/technical_test).
-**This repository consists of two projects (for parts 1 and 2 of the task)**
 
+**This repository consists of three projects...**
+- **Part 1A:** A console application to output ride results [{carType} - {price}] for Dave's taxis only. Searching by pickup and drop off location (2 parameters).
+- **Part 1B:** A console application to output ride results [{carType} - {supplier} - {price}] for all three taxi suppliers. Searching by pickup and drop off location, and with a filter on passenger numbers (3 parameters).
+- **Part 2:** A REST API that provides the same functionality as Part1B.
+
+---
+
+## Envrionment Setup
 Download the respository.
 ```
 $ git clone https://github.com/CharlesWatsonUK/BookingGo
 ```
+**Machine Requirements:**
+- **Java JDK8**
+- **Apache Maven 3.5**
 
-### Run the solutions (pre-compiled)
-Requires: Java 8 - JRE 8
+**Maven Dependencies:**
+[Click here](https://github.com/CharlesWatsonUK/tech-dependencies.md) for a list of dependencies/ technologies I've used.
 
-1) Go to the dist folder.
-```
-$ cd BookingGo/target
-```
 
-2)   Run the distributable (JAR) files.
+Note: If you get a ```Unable to access jarfile``` error, try closing and reopening the command line window, or try moving the JAR file to another directory and running it from there.
 
-A) Run the JAR for Task 1 - CLI Solution.
-```
-$ java -jar BookingGo_Part1.jar <pickup> <dropoff> <passengers>
-```
-B) Run the JAR for Task 2 - REST API Solution.
-```
-$ java -jar <BookingGo_Part2.jar
-```
-[Consult the API documentation](https://github.com/CharlesWatsonUK/BookingGo/blob/master/api.md) to make requests.
+If you have any queries or issues regarding my solutions please don't hesitate to ask me: charles.w9788@googlemail.com
+I look forward to hearing your feedback!
 
-### Compile and run the solutions (including tests)
-Requires: Java 8 - (JDK & JRE), Apache Maven 3
-1) Go to the project root for the solution part you want.
+---
+
+## Build & Run Part1A
+1) Go to the root directory of Part1A
 ```
-$ cd BookingGo/BookingGo_Part1
+$ cd BookingGo/BookingGo_Part1A
 ```
-OR
-```
-$ cd BookingGo/BookingGo_Part2
-```
-2) Maven compile
+2) Compile the java source files to class files
 ```
 $ mvn clean compile
 ```
-3) Package compiled classes and dependencies into a JAR - tests are also run.
+3) Package these files and any dependencies' files into a single executable JAR file.
+This process will also run some tests.
 ```
 $ mvn package
 ```
-4) Run your newly compiled and packaged distributable.
-
-A) If you've just packaged Part 1...
+4) Run the solution by executing the JAR file (it will be placed into a new folder - /target)
+It takes two parameters pickup location and dropoff location.
+The ride results should display in the terminal window.
 ```
 $ cd target
-$ java -jar <JAR file> <pickup> <dropoff> <passengers>
+$ java -jar BookingGo_Part1A-1.0.0 51.470020,-0.454295 51.470021,-0.454280
 ```
-B) If you've just packaged Part 2...
+
+---
+
+## Build & Run Part1B
+1) Go to the root directory of Part1B
+```
+$ cd BookingGo/BookingGo_Part1B
+```
+2) Compile the java source files to class files
+```
+$ mvn clean compile
+```
+3) Package these files and any dependencies' files into a single executable JAR file.
+This process will also run some tests.
+```
+$ mvn package
+```
+4) Run the solution by executing the JAR file (it will be placed into a new folder - /target)
+It takes three parameters pickup location, dropoff location and the number of passengers.
+The ride results should display in the terminal window.
 ```
 $ cd target
-$ java -jar <JAR file>
+$ java -jar BookingGo_Part1B-1.0.0 51.470020,-0.454295 51.470021,-0.454280 5
 ```
-[Consult the API documentation](https://github.com/CharlesWatsonUK/BookingGo/blob/master/api.md) to make requests.
 
-### Technologies
-##### App
-- Java 8 - core language
-- GSON - JSON handling
-- Spring Boot - REST API (part 2 only)
+---
 
-##### Test
-- JUnit 5 (Jupiter API) (part 1 only)
-- Spring Boot Test - (part 2 only)
-    * Spring Boot Test package comes with JUnit4.
-
-##### Build
-- Apache Maven 3 - build & dependency management
-  - Maven Surefire Plugin - so JUnit5 tests are picked up by Maven (part 1 only)
-  - Apache Shade Plugin - puts everything in the JAR (part 1 only)
-  - Spring Boot Maven Plugin - puts everything in the JAR (part 2 only)
+## Build & Run Part2
+1) Go to the root directory of Part2
+```
+$ cd BookingGo/BookingGo_Part2
+```
+2) Compile the java source files to class files
+```
+$ mvn clean compile
+```
+3) Package these files and any dependencies' files into a single executable JAR file.
+This process will also run some tests.
+```
+$ mvn package
+```
+4) Start the API by executing the JAR file (it will be placed into a new folder - /target)
+```
+$ cd target
+$ java -jar BookingGo_Part2-1.0.0
+```
+5) To make a request to the API consult the [API documentation](https://github.com/CharlesWatsonUK/apiDocs.md)
