@@ -1,6 +1,6 @@
 # BookingGo
 
-My solution for the [BookingGo technical assesment](https://github.com/rideways/technical_test).
+My solution for the [BookingGo technical assessment](https://github.com/rideways/technical_test).
 
 **This repository consists of three projects...**
 - **Part 1A:** A console application to output ride results [{carType} - {price}] for Dave's taxis only. Searching by pickup and drop off location (2 parameters).
@@ -22,9 +22,12 @@ $ git clone https://github.com/CharlesWatsonUK/BookingGo
 [Click here](https://github.com/CharlesWatsonUK/BookingGo/blob/master/tech-dependencies.md) for a list of dependencies/ technologies I've used.
 
 
-Note: If you get a ```Unable to access jarfile``` error, try closing and reopening the command line window, or try moving the JAR file to another directory and running it from there.
+Note 1: If you get a ```Unable to access jarfile``` error, try closing and reopening the command line window, or try moving the JAR file to another directory and running it from there.
+
+Note 2: If you wish to skip the running of tests when packaging the solutions, append ```-DskipTests``` to the ```mvn package``` command.
 
 If you have any queries or issues regarding my solutions please don't hesitate to ask me: charles.w9788@googlemail.com
+
 I look forward to hearing your feedback!
 
 ---
@@ -48,7 +51,7 @@ It takes two parameters pickup location and dropoff location.
 The ride results should display in the terminal window.
 ```
 $ cd target
-$ java -jar BookingGo_Part1A-1.0.0 51.470020,-0.454295 51.470021,-0.454280
+$ java -jar BookingGo_Part1A-1.0.0.jar 51.470020,-0.454295 51.470021,-0.454280
 ```
 
 ---
@@ -72,7 +75,7 @@ It takes three parameters pickup location, dropoff location and the number of pa
 The ride results should display in the terminal window.
 ```
 $ cd target
-$ java -jar BookingGo_Part1B-1.0.0 51.470020,-0.454295 51.470021,-0.454280 5
+$ java -jar BookingGo_Part1B-1.0.0.jar 51.470020,-0.454295 51.470021,-0.454280 5
 ```
 
 ---
@@ -94,6 +97,6 @@ $ mvn package
 4) Start the API by executing the JAR file (it will be placed into a new folder - /target)
 ```
 $ cd target
-$ java -jar BookingGo_Part2-1.0.0
+$ java -jar BookingGo_Part2-1.0.0.jar
 ```
 5) To make a request to the API consult the [API documentation](https://github.com/CharlesWatsonUK/BookingGo/blob/master/api.md)
