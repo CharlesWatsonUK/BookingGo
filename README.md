@@ -19,7 +19,7 @@ $ git clone https://github.com/CharlesWatsonUK/BookingGo
 - **Apache Maven 3.5**
 
 **Maven Dependencies:**
-[Click here](https://github.com/CharlesWatsonUK/tech-dependencies.md) for a list of dependencies/ technologies I've used.
+[Click here](https://github.com/CharlesWatsonUK/BookingGo/blob/master/tech-dependencies.md) for a list of dependencies/ technologies I've used.
 
 
 Note: If you get a ```Unable to access jarfile``` error, try closing and reopening the command line window, or try moving the JAR file to another directory and running it from there.
@@ -96,4 +96,4 @@ $ mvn package
 $ cd target
 $ java -jar BookingGo_Part2-1.0.0
 ```
-5) To make a request to the API consult the [API documentation](https://github.com/CharlesWatsonUK/apiDocs.md)
+5) To make a request to the API consult the [API documentation](https://github.com/CharlesWatsonUK/BookingGo/blob/master/api.md)
